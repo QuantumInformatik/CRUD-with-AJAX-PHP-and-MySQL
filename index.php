@@ -10,7 +10,7 @@
 		display: none; 
 	}
 </style>
-		<title>Crud Ajax PHP</title> 
+		<title>Crud Ajax PHP con BS</title> 
 	</head>
 	<body id="load">
 		<div class="container">
