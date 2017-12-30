@@ -5,15 +5,10 @@ $bd = new PDO('mysql:host=localhost;dbname=crud','root','putas-1997');
 $row = $bd->query("SELECT * FROM tblproductos")->fetchALL(PDO::FETCH_OBJ);
 $contaR= count($row);
 
-
 $c = $_POST['c'];
 $d = $_GET['d']; 
 $ld= $_POST['ld']; 
 $u= $_POST['u'];
-
-
-		 
-
 
 if (isset($c) && $c!='') {
 	if ($c=='insertar') {
@@ -45,7 +40,6 @@ if (isset($c) && $c!='') {
 					productoEST = '$estu'
 					WHERE productoID = '$idUp'");
 		
-
 	}
 
 }else if(isset($ld) && $ld!=''){

@@ -29,19 +29,7 @@
  		})//ajax
  	});//Submit()
  })//document ready
- 	[Dolar].ajax({
-             url:   'Equivale al valor del actíon en un FORM',
-             type:  'Equivale a Metodo GET o POST',
-             data:  'Datos que seran enviados',
-             beforeSend: function () {
-                     [Dolar]("#resultado").html("Procesando, espere por favor...");
-             },
-             success:  function (response) {
-                     [Dolar]("#resultado").html(response);
-             }
-     });
-
-
+ 
 document.getElementById("load").onload = function() {mostrar()};
 function ocultarFmod(){
 	$('#fmod').hide();
