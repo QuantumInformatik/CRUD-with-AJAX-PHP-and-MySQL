@@ -22,7 +22,7 @@
 			<div class="row">
 				<div class="col-md-6">	
 					<form id="finsertar" >
-						<h3>Formulario de Inserción</h3>
+						<h3>Formulario para insertar:</h3>
 							<table class="table table-hover ">
 								<tr>
 									<th>Producto</th>
@@ -54,7 +54,7 @@
 				<div class="col-md-6" id="mostrar"></div>
 			</div>
 			<a class="btn btn-primary" href="php/truncate.php">Truncate</a>
-		</div><!-- End Container -->
+		</div>
           <script  src="js/jquery.js"></script>
 		  <script  src="js/main.js"></script>
 		  

@@ -60,7 +60,7 @@ function eliminar(id){
 				mostrar();
 				$('#remove').show();
 			}
-        })//ajax
+        })
 }
 function llevarDatos(name){
 	var idm= name;

@@ -40,7 +40,7 @@ if (isset($c) && $c!='') {
         $up = $bd->query("SELECT productoID, productoNOM, productoCAN, productoPRE FROM tblproductos WHERE productoID='$idm'")->fetch(PDO::FETCH_OBJ);
 ?>
 
-<h3>Formulario de Actualización</h3>
+<h3>Formulario para actualizar:</h3>
 <table class="table table-hover table-responsive">
 	<tr>
 		<th>ID</th>
