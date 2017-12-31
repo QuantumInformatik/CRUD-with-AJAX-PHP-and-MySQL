@@ -25,17 +25,17 @@
 						<h3>Formulario para insertar:</h3>
 							<table class="table table-hover ">
 								<tr>
-									<th>Producto</th>
+									<th>Producto:</th>
 									<td><input autofocus type="text" name="producto" required="" class="form-control" placeholder="Ingrese nombre del producto"></td>
 								</tr>
 								<tr>
-									<th>Cantidad</th>
+									<th>Cantidad:</th>
 									<td>
 										<input type="number" name="cantidad"  class="form-control" placeholder="Ingrese cantidad">
 									</td>
 								</tr>
 								<tr>
-									<th>Precio</th>
+									<th>Precio:</th>
 									<td><input type="number" name="precio"  class="form-control" placeholder="Ingrese precio"></td>
 								</tr>
 								<tr>
@@ -53,7 +53,7 @@
 
 				<div class="col-md-6" id="mostrar"></div>
 			</div>
-			<a class="btn btn-primary" href="php/truncate.php">Truncate</a>
+			<a class="btn btn-primary" href="php/truncate.php">Vaciar tabla de productos</a>
 		</div>
           <script  src="js/jquery.js"></script>
 		  <script  src="js/main.js"></script>
