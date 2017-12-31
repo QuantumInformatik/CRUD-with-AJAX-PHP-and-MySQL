@@ -1,5 +1,5 @@
 <?php 
-$bd = new PDO('mysql:host=localhost;dbname=crud','root','putas-1997');
+$bd = new PDO('mysql:host=localhost;dbname=crud','root','');
 
 $bd->query("TRUNCATE tblproductos");
 
