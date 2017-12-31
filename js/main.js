@@ -26,9 +26,9 @@
 		 			}, 600);
 	 			}
  			}
- 		})//ajax
- 	});//Submit()
- })//document ready
+ 		})
+ 	});
+ })
  
 document.getElementById("load").onload = function() {mostrar()};
 function ocultarFmod(){
