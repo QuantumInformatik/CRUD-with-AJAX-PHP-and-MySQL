@@ -10,12 +10,12 @@
 		display: none; 
 	}
 </style>
-		<title>Crud Ajax PHP con BS</title> 
+		<title>CRUD CON AJAX-PHP Y MySQL</title> 
 	</head>
 	<body id="load">
 		<div class="container">
 			<div class="jumbotron" style="background: #F76464 ">
-			<h1 style="color: white">Crud Ajax PHP MYSQL</h1>
+			<h1 style="color: white">CRUD CON AJAX-PHP Y MySQL</h1>
 			  <p>...</p>
 			</div>
 
@@ -40,7 +40,7 @@
 								</tr>
 								<tr>
 									<td> </td>
-									<td><input type="submit" name="insertar"  id="cagar" value="Insertar en la BD" class="btn btn-primary"></td>
+									<td><input type="submit" name="insertar"  id="cagar" value="Insertar" class="btn btn-primary"></td>
 									<td><span id="insertar"></span></td> 
 									<td><span id="remove"></span></td>
 									<td><span id="modificar"></span></td>
