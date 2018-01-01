@@ -21,29 +21,29 @@
 
 			<div class="row">
 				<div class="col-md-6">	
-					<form id="finsertar" >
+					<form id="fins" >
 						<h3>Formulario para insertar:</h3>
 							<table class="table table-hover ">
 								<tr>
 									<th>Producto:</th>
-									<td><input autofocus type="text" name="producto" required="" class="form-control" placeholder="Ingrese nombre del producto"></td>
+									<td><input autofocus type="text" name="product" required="" class="form-control" placeholder="Write the name of the product."></td>
 								</tr>
 								<tr>
 									<th>Cantidad:</th>
 									<td>
-										<input type="number" name="cantidad"  class="form-control" placeholder="Ingrese cantidad">
+										<input type="number" name="quantity"  class="form-control" placeholder="Write the quantity.">
 									</td>
 								</tr>
 								<tr>
 									<th>Precio:</th>
-									<td><input type="number" name="precio"  class="form-control" placeholder="Ingrese precio"></td>
+									<td><input type="number" name="price"  class="form-control" placeholder="Write the price."></td>
 								</tr>
 								<tr>
 									<td> </td>
-									<td><input type="submit" name="insertar"  id="cagar" value="Insertar" class="btn btn-primary"></td>
-									<td><span id="insertar"></span></td> 
-									<td><span id="remove"></span></td>
-									<td><span id="modificar"></span></td>
+									<td><input type="submit" name="insertar"   value="Insert into" class="btn btn-primary"></td>
+									<td><span id="spanInsert"></span></td> 
+									<td><span id="spanRemove"></span></td>
+									<td><span id="spanModify"></span></td>
 								</tr>
 							</table>
 					</form >
@@ -51,9 +51,9 @@
 					</form>
 				</div>
 
-				<div class="col-md-6" id="mostrar"></div>
+				<div class="col-md-6" id="divShowRecords"></div>
 			</div>
-			<a class="btn btn-primary" href="php/truncate.php">Vaciar tabla de productos</a>
+			<a class="btn btn-primary" href="php/truncate.php">Truncate</a>
 		</div>
           <script  src="js/jquery.js"></script>
 		  <script  src="js/main.js"></script>

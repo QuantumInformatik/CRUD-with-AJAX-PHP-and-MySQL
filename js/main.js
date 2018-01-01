@@ -1,28 +1,30 @@
  $(document).ready(function(){
- 	$('#finsertar').submit(function(e){ //ACTIVAMOS EL ENVENTO ENVIAR EN EL FORMULARIO
+ 	$('#fins').submit(function(e){ //ACTIVAMOS EL ENVENTO ENVIAR EN EL FORMULARIO
  		e.preventDefault(); //PREVENIMOS QUE SE RECARGUE LA PAGINA, AUNQUE SE PUEDE ENTENDER DE OTRA MANERA. 
  		var data=$(this).serializeArray();// SIRIALAIZ, Para volver los datos del formulario en una matriz de dos columnas name y value
- 		data.push({name:'c',value:'insertar'}); //Insertar "Un nuevo registro a la matriz" o agregar un nuevo elemento al conjunto. 
+ 		data.push({name:'c',value:'insert'}); //Insertar "Un nuevo registro a la matriz" o agregar un nuevo elemento al conjunto. 
  		$.ajax({
  			url:'php/procesador.php',
  			type: 'POST',
  			data: data,
  			success: function(dat){
  				if (dat==1) {
-	 				$('#insertar').html("<div class='alert alert-success'><strong>Bien!</strong></div>");
+	 				$('#spanInsert').html("<div class='alert alert-success'><strong>Insertado!</strong></div>");
 	 			    $('input[type=text]').focus();
 		 			setTimeout(function(){
 		 			$('input[type=text]').val('');
-		 			$('input[type=number]').val(''); 
-		 			}, 600);
-		 			 mostrar(); 
-		 			 $('#insertar').show();
+		 			$('input[type=number]').val('');
+		 			$('#spanInsert').hide(); 
+		 			}, 700);
+		 			 showRecords(); //mostrar
+		 			 $('#spanInsert').show(); 
+		 			 
 	 			}else{
-	 			    $('#insertar').html('Hubo un error.');
+	 			    $('#spanInsert').html('Hubo un error.');
 	 			 	setTimeout(function(){
 		 			$('input[type=text]').val('');
 		 			$('input[type=number]').val('');
-		 			$('#insertar').hide();
+		 			$('#spanInsert').hide();
 		 			}, 600);
 	 			}
  			}
@@ -30,69 +32,69 @@
  	});
  })
  
-document.getElementById("load").onload = function() {mostrar()};
-function ocultarFmod(){
+document.getElementById("load").onload = function() {showRecords()};
+function hideFmod(){
 	$('#fmod').hide();
-	$('#finsertar').css('display','inline');
+	$('#fins').css('display','inline');
 }
-function mostrar(){
+function showRecords(){
 	$.ajax({
 		url:'php/procesador.php',
 		type: 'get',
 		success: function(dat){
-      var show = $("#mostrar");
+      var show = $("#divShowRecords");
    	  show.html(dat); 
 		}
     })//ajax
 }
-function eliminar(id){
-	var idele = id;
-    var sub = 'id='+idele;
+function deleteRow(id){
+	var idRm = id;//id remove(rm).
+    var sendRm = 'id='+idRm;//dato a enviar.
 		$.ajax({
 			url:'php/procesador.php?d=delete',
 			type: 'POST',
-			data: sub,
+			data: sendRm,
 			success: function(){
-				$('#remove').html("<div class='alert alert-danger'><strong>Bien!</strong></div>");
+				$('#spanRemove').html("<div class='alert alert-danger'><strong>Eliminado!</strong></div>");
 				setTimeout(function(){
-				$('#remove').hide();
+				$('#spanRemove').hide();
 				}, 700);
-				mostrar();
-				$('#remove').show();
+				showRecords();
+				$('#spanRemove').show();
 			}
         })
 }
-function llevarDatos(name){
-	var idm= name;
-	var llevar = 'llevar';
+function sendData(name){
+	var idMd= name;//id a modificar
+	var carry = 'formMd';
 		$.ajax({
 	            url:   'php/procesador.php',
 	            type:  'POST',
-                data: {sujeto:idm,ld:llevar},
+                data: {sendMd:idMd,caMd:carry},
 	            success:  function (response) {
-	            	 $('#finsertar').hide();
+	            	 $('#fins').hide();
 	                    $('#fmod').css('display','inline');
 	                    $("#fmod").html(response);
 	            }
 	    });
 }
-function actualizar(){
+function updateRow(){
 	 var datosUp = $("#fmod").serializeArray();
- 		datosUp.push({name:'u',value:'mod'});
+ 		datosUp.push({name:'u',value:'update'});
  		$.ajax({
  			url:'php/procesador.php',
  			type: 'POST',
  			data: datosUp			
  		})//ajax
  			.done(function(){ 
- 				$('#modificar').html("<div class='alert alert-info'><strong>Actualizado!</strong></div>");	
+ 				$('#spanModify').html("<div class='alert alert-info'><strong>Actualizado!</strong></div>");	
 				$('#fmod').hide();
 				setTimeout(function(){
-				$('#modificar').hide();
+				$('#spanModify').hide();
 				}, 700);
- 				$('#finsertar').css('display','inline');
+ 				$('#fins').css('display','inline');
  			    $('input[type=text]').focus();
-	 			mostrar();
+	 			showRecords();
 		})
 }
 
